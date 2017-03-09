@@ -16,3 +16,193 @@ a
 	color: inherit
 	+roboto-reg
 	+trans
+
+.overlay
+	background-color: $violet
+	opacity: 0
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 200
+	visibility: hidden
+	opacity: 0
+	transition: all 0.3s
+	&.is-active
+		visibility: visible
+		opacity: 1
+.popup
+	position: fixed
+	padding: 60px
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 300
+	overflow-x: hidden
+	overflow-y: auto
+	visibility: hidden
+	opacity: 0
+	transition: all 0.3s
+	&.is-active
+		visibility: visible
+		opacity: 1
+	+vertical
+	&__window
+		display: inline-block
+		vertical-align: middle
+		max-width: 808px
+		width: 100%
+		box-shadow: 0 0 21px #000000
+		border: 1px solid #29293c
+		background-color: #1b1b28
+	&__body
+		font-size: 16px
+	&__caption
+		padding: 22px 0
+		display: table
+		width: 100%
+		font-size: 14px
+		line-height: 1.2
+	&__top
+		background-color: #181823
+		text-align: left
+		padding: 9px 44px
+		position: relative 
+	&__top-title
+		font-size: 30px
+		+roboto-light
+	&__row
+		background-color: #1B1B28
+		padding: 12px 0px 
+		display: table
+		width: 100%
+		&:nth-child(even)
+			background-color: #181823
+	&__col,
+	&__caption-col
+		display: table-cell
+		vertical-align: middle
+		text-align: left
+		&_1
+			width: 46%
+			padding-left: 44px
+		&_2
+			width: 35%
+		&_3
+			width: 19%
+			padding-right: 52px
+.popup-reg
+	&__window
+		display: inline-block
+		vertical-align: middle
+		max-width: 864px
+	&__top
+		text-align: left
+		padding-right: 350px
+	&__body
+		padding-top: 126px
+	&__sub
+		padding-top: 8px
+	&__title
+		font-size: 48px
+.form
+	position: relative
+	&__bottom
+		text-align: right
+		margin-top: 40px
+.form-step-1
+	.form__row
+		counter-reset: list
+		&:not(:first-of-type)
+			padding-top: 60px
+		.btn-category
+			&__inner
+				&:before
+					counter-increment: list
+					content: '0' counter(list)
+					position: absolute
+					top: 0
+					left: 20px
+					z-index: 1
+					background-color: $violet
+					font-size: 18px
+					padding: 0 18px
+					margin-top: -6px
+.form-step-2
+	.form__row
+		&:not(:first-of-type)
+			margin-top: 12px
+.input
+	position: relative
+	border-bottom: 4px solid rgba(255, 255, 255, 0.4)
+	&:before
+		content: '*'
+		font-size: 30px
+		line-height: 1
+		position: absolute
+		top: 15px
+		right: 100%
+		margin-right: 14px
+		color: rgba(#fff, 0.4)
+	&__element
+		background: none
+		+roboto-bold
+		font-size: 30px
+		line-height: 1.2
+		padding: 12px 0
+		display: block
+		width: 100%
+		color: rgba(#fff, 0.4)
+		+placeholder-color(rgba(#fff, 0.4))
+.tabs
+	text-align: left
+	+clr
+	&__control
+		float: left
+		width: 272px
+		padding-right: 130px
+		min-height: 1px
+	&__control-item
+		&:not(:first-of-type)
+			margin-top: 20px
+	&__content
+		float: left
+		width: 592px
+		position: relative
+	&__link
+		font-size: 24px
+		line-height: 1.2
+		color: #fff
+		display: block
+		padding-bottom: 36px
+		color: rgba(#fff, 0.4)
+		transition: all 0.3s
+		position: relative
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			height: 10px
+			transform: scaleY(0.5)
+			transition: all 0.3s
+			background-color: rgba(#fff, 0.4)
+		&:hover,
+		&.is-active
+			color: #fff
+			&:after
+				transform: scaleY(1)
+				background-color: #fff
+.info
+	+roboto-bold
+	font-size: 24px
+	max-width: 380px
+	text-align: right
+	display: inline-block
+	position: absolute
+	right: 0
+	top: -210px

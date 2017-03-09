@@ -9,4 +9,5 @@ $(function() {
 	//=include partial/initParallax.js
 	//=include partial/initFullapage.js
 	//=include partial/menu.js
+	//=include partial/popup.js
 });

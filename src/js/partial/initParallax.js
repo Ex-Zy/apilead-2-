@@ -16,8 +16,8 @@ function showParallax(moveForce, rotateForce) {
 		});
 
 		$('.js-parallax-company').css({
-			'right': (moveX * 4)+'px',
-			'bottom': (moveY * 4)+'px',
+			'right': (moveX * 3)+'px',
+			'bottom': (moveY * 3)+'px',
 		});
 
 	});
