@@ -1,0 +1,69 @@
+.out
+	min-width: 320px
+	background-color: $dark 
+.inner
+	@extend %inner
+	position: relative
+	padding-top: 110px
+	height: 100vh
+	+clr
+.perfomance
+	.inner
+		+vertical
+.button-wrp
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	z-index: 10
+	padding-top: 122px
+.company
+	position: relative
+	text-align: center
+	+vcenter
+	margin-top: -122px
+	+panton-bold
+	&__pretitle
+		font-size: 36px
+		line-height: 1
+		letter-spacing: 0.2em
+		color: #fff
+	&__title
+		max-width: 530px
+		width: 100%
+		padding-top: 28px
+		margin: auto
+		+hide-text
+		svg
+			@extend %img
+.parallax-1
+	position: absolute
+	top: 110px
+	right: 0
+	bottom: 0
+	left: 0
+	overflow: hidden
+	&__item
+		@extend %parallax
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			margin: auto
+			background: url(../img/parallax-bg.png) no-repeat
+			width: 1186px
+			height: 741px
+.parallax-2
+	position: absolute
+	top: 110px
+	right: 0
+	bottom: 0
+	left: 0
+	overflow: hidden
+	&__item
+		@extend %parallax
+		transition: all 0.1s
+	

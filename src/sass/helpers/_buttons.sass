@@ -1,0 +1,26 @@
+.btn
+	@extend %btn
+	border: 4px solid #7534ff
+	color: #fff
+	line-height: 1
+	background-color: transparent
+	+panton-bold
+	padding: 29px 101px
+	font-size: 18px
+	&:hover,
+	&:focus
+		top: 5px
+		&:after
+			display: none
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		left: -2px
+		right: -2px
+		top: 100%
+		margin-top: -4px
+		height: 10px
+		border-bottom-left-radius: 8px
+		border-bottom-right-radius: 8px
+		background-color: #7534ff

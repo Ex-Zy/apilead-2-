@@ -1,0 +1,18 @@
+{
+  "name": "lead",
+  "homepage": "https://github.com/Ex-Zy/lead",
+  "authors": [
+    "DESKTOP-DH8PFBK\\sereg <serega1905@ukr.net>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
