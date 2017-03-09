@@ -1,49 +1,46 @@
 .out
 	min-width: 320px
-	background-color: $dark 
+	background-color: $dark
+	transform-style: preserve-3d
+	transition: transform 0.3s ease-in-out !important
 .inner
 	@extend %inner
 	position: relative
-	padding-top: 110px
 	height: 100vh
 	+clr
 .perfomance
 	.inner
 		+vertical
+		padding-top: 110px
 .button-wrp
 	display: inline-block
 	vertical-align: middle
 	position: relative
 	z-index: 10
-	padding-top: 122px
+	padding-top: 172px
 .company
 	position: relative
 	text-align: center
 	+vcenter
 	margin-top: -122px
 	+panton-bold
+	max-width: 700px
 	&__pretitle
 		font-size: 36px
-		line-height: 1
 		letter-spacing: 0.2em
 		color: #fff
 	&__title
 		max-width: 530px
 		width: 100%
-		padding-top: 28px
+		padding-top: 15px
 		margin: auto
 		+hide-text
 		svg
 			@extend %img
-.parallax-1
-	position: absolute
-	top: 110px
-	right: 0
-	bottom: 0
-	left: 0
-	overflow: hidden
+.parallax-bg
+	@extend %parallax
 	&__item
-		@extend %parallax
+		@extend %parallax-item
 		&:before
 			content: ''
 			display: block
@@ -56,14 +53,103 @@
 			background: url(../img/parallax-bg.png) no-repeat
 			width: 1186px
 			height: 741px
-.parallax-2
-	position: absolute
-	top: 110px
-	right: 0
-	bottom: 0
-	left: 0
-	overflow: hidden
+.parallax-company
+	z-index: 2
+	@extend %parallax
 	&__item
 		@extend %parallax
-		transition: all 0.1s
-	
+		// transition: all 0.1s
+.topper
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	z-index: 1
+	padding-top: 40px
+	transition: transform 0.3s ease-in-out
+	&__in
+		max-width: 1880px
+		position: relative
+		padding: 70px 20px 0
+		margin: auto
+.logo
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	margin: auto
+	width: 112px
+.entry
+	position: absolute
+	font-size: 0
+	top: 0
+	right: 48px
+	padding: 14px 0 0
+	&__item
+		display: inline-block
+		vertical-align: top
+		&:not(:last-of-type)
+			margin-right: 90px
+	&__link
+		font-size: 16px
+		color: #fff
+		position: relative
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			bottom: -12px
+			width: 0
+			height: 4px
+			background-color: #0189ff
+			+trans
+		&.is-active,
+		&:hover
+			color: #0189ff
+			&:after
+				width: 22px
+.sidebar
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	z-index: 90
+	overflow-x: hidden
+	overflow-y: auto
+	background-color: #17161c
+	box-shadow: 0 0 111px rgba(2, 2, 3, 0.8)
+	transition: transform 0.3s ease-in-out
+	transform: translate3d(-100%, 0, 0)
+	&__in
+		width: 356px
+		min-height: 100vh
+		padding: 100px 20px 100px 100px
+.navigation
+	a
+		font-size: 20px
+		color: #a6a3b3
+		display: block
+		padding: 31px 0
+		+roboto-thin
+		&:hover,
+		&:focus,
+		&.is-active
+			color: #fff
+			text-indent: -20px
+.authorization
+	padding-top: 40px
+	&__item
+		margin-top: 20px
+	&__btn
+		display: inline-block
+		vertical-align: top
+		padding: 15px 20px
+		border: 4px solid #a35aff
+		border-radius: 25px
+		background: transparent
+		transition: all 0.3s
+		color: #fff
+		font-size: 14px
+		+panton-bold
+		&:hover
+			background: darken(#a35aff, 5%)

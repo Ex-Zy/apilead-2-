@@ -1,12 +1,16 @@
 body
-	background-color: $section-bg-dark
+	background-image: linear-gradient(104deg, #7436ff 0%, #9000ff 100%)
 	line-height: 1.4
 	font-size: 18px
 	+roboto-reg
 	color: #fff
-	&.is-hidden
-		overflow: hidden
-
+	perspective: 1500px
+	&.is-open-sidebar
+		.out,
+		.topper
+			transform: translate3d(0, 0, -300px) !important
+		.sidebar
+			transform: translate3d(0, 0, 0)
 a
 	text-decoration: none
 	color: inherit

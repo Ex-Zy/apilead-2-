@@ -1,0 +1,36 @@
+<!-- BEGIN sidebar -->
+<div class="sidebar js-sidebar">
+	{% set navList = [
+		'Преимущества', 
+		'Вебмастерам', 
+		'Рекламодателям', 
+		'Топ офферов', 
+		'Отзывы',
+		'Партнеры'
+	] %}
+	<!-- BEGIN sidebar__in -->
+	<div class="sidebar__in">
+		<ul class="navigation">
+			{% for navItem in navList %}
+			<li class="navigation__item">
+				{% if loop.index0 == activeLink %}
+					<a href="#" class="is-active">{{navItem}}</a>
+				{% else %}
+					<a href="#">{{navItem}}</a>
+				{% endif %}
+			</li>
+			{% endfor %}
+		</ul>
+		<ul class="authorization">
+			<li class="authorization__item">
+				<button type="button" class="authorization__btn">ВОЙТИ</button>
+			</li>
+			<li class="authorization__item">
+				<button type="button" class="authorization__btn">СОЗДАТЬ АККАУНТ</button>
+			</li>
+		</ul>
+	</div>
+	<!-- END sidebar__in -->
+
+</div>
+<!-- END sidebar -->

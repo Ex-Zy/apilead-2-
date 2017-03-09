@@ -14,7 +14,7 @@
     <!-- BEGIN content -->
     <div class="out" id="fullpage">
       <!-- BEGIN perfomance -->
-      <section class="perfomance section">
+      <section class="perfomance js-section">
         <!-- BEGIN inner -->
         <div class="inner">
           <!-- BEGIN button-wrp -->
@@ -22,14 +22,14 @@
 				<span>НАЧАТЬ РАБОТУ</span>
 			</button> </div>
           <!-- END button-wrp -->
-          <!-- BEGIN parallax-1 -->
-          <div class="parallax-1 js-parallax-1">
-            <div class="parallax-1__item"></div>
+          <!-- BEGIN parallax-bg -->
+          <div class="parallax-bg">
+            <div class="parallax-bg__item js-parallax-bg"></div>
           </div>
-          <!-- END parallax-1 -->
-          <!-- BEGIN parallax-2 -->
-          <div class="parallax-2 js-parallax-2">
-            <div class="parallax-2__item">
+          <!-- END parallax-bg -->
+          <!-- BEGIN parallax-company -->
+          <div class="parallax-company">
+            <div class="parallax-company__item js-parallax-company">
               <div class="company">
                 <div class="company__pretitle">ЦЕНТР РЕАЛИЗАЦИИ</div>
                 <div class="company__title"> лидов <svg id="Слой_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 516.6 131.7">
@@ -65,13 +65,13 @@
               </div>
             </div>
           </div>
-          <!-- END parallax-2 -->
+          <!-- END parallax-company -->
         </div>
         <!-- END inner -->
       </section>
       <!-- END perfomance -->
-      <div class="section">
-        <div class="inner">
+      <div class="js-section">
+        <div class="inner" style="padding: 150px 0">
           <h1>
             <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quasi perferendis atque dignissimos saepe excepturi culpa natus repellendus repellat. Enim omnis impedit minus dolores qui minima aliquam velit beatae ducimus.</div>
             <div>Possimus quaerat reprehenderit veniam, ab tempore reiciendis. Quo odit sint adipisci omnis, possimus quaerat sunt nemo totam explicabo dolores deleniti distinctio placeat neque ea tempora laborum? Sint perspiciatis eveniet excepturi.</div>
@@ -121,6 +121,41 @@
       </div>
     </div>
     <!-- END content -->
+    <!-- BEGIN topper -->
+    <div class="topper js-scroll">
+      <!-- BEGIN topper__in -->
+      <div class="topper__in"> <button type="button" class="btn-menu js-menu">
+			<span></span>Menu
+		</button>
+        <div class="logo"> <img src="img/logo.png" alt="" title="Apilead company"> </div>
+        <ul class="entry">
+          <li class="entry__item"> <a href="#" class="entry__link is-active js-open-popup" data-link="registration">Войти</a> </li>
+          <li class="entry__item"> <a href="#" class="entry__link js-open-popup" data-link="registration">Создать аккаунт</a> </li>
+        </ul>
+      </div>
+      <!-- END topper__in -->
+    </div>
+    <!-- END topper -->
+    <!-- BEGIN sidebar -->
+    <div class="sidebar js-sidebar">
+      <!-- BEGIN sidebar__in -->
+      <div class="sidebar__in">
+        <ul class="navigation">
+          <li class="navigation__item"> <a href="#">Преимущества</a> </li>
+          <li class="navigation__item"> <a href="#">Вебмастерам</a> </li>
+          <li class="navigation__item"> <a href="#" class="is-active">Рекламодателям</a> </li>
+          <li class="navigation__item"> <a href="#">Топ офферов</a> </li>
+          <li class="navigation__item"> <a href="#">Отзывы</a> </li>
+          <li class="navigation__item"> <a href="#">Партнеры</a> </li>
+        </ul>
+        <ul class="authorization">
+          <li class="authorization__item"> <button type="button" class="authorization__btn">ВОЙТИ</button> </li>
+          <li class="authorization__item"> <button type="button" class="authorization__btn">СОЗДАТЬ АККАУНТ</button> </li>
+        </ul>
+      </div>
+      <!-- END sidebar__in -->
+    </div>
+    <!-- END sidebar -->
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
