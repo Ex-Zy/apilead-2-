@@ -5,4 +5,7 @@ $('#fullpage').fullpage({
 	responsiveWidth: 767,
 	speed: 400,
 	verticalCentered: true,
+	lockAnchors: false,
+    anchors:['firstPage', 'secondPage'],
+    css3: true,
 });
